@@ -1,6 +1,8 @@
 const assert=require('assert');
 const w=require('./words.js');
-for(const en of ['loop','variable','debug']) assert.strictEqual(w.filter(x=>x.en===en).length,1);
+assert.ok(w.length >= 30);
+assert.ok(w.every(x => Number.isInteger(x.unit) && x.unit >= 1 && x.unit <= 6 && x.zh !== '??'));
+assert.strictEqual(new Set(w.map(x => x.en.toLowerCase())).size,w.length);
 const {countDue,schedule}=require('./srs.js');
 assert.strictEqual(typeof countDue,'function');
 assert.strictEqual(countDue([],100),0);

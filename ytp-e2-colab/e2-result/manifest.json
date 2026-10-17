@@ -1,9 +1,15 @@
-{
-  "name": "YTP VocaBuddy 背單字夥伴",
+﻿{
+  "name": "國三英文・中文答英文",
   "short_name": "VocaBuddy",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f4f6f5",
   "theme_color": "#0f766e",
-  "icons": [{ "src": "icon.png", "sizes": "512x512", "type": "image/png" }]
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

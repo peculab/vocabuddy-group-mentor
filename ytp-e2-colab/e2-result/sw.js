@@ -1,12 +1,16 @@
-const CACHE = "ytp-vocabuddy-v2";     // Lab 10 改版：v1 → v2，舊快取才會換新
-const SHELL = ["./", "index.html", "words.js", "srs.js", "csv.js", "manifest.json", "icon.png"];  // Lab 10 加 csv.js；icon.png 見 E-025
+const CACHE = "ytp-vocabuddy-zh-en-v3";
+const SHELL = ["./", "index.html", "words.js", "srs.js", "csv.js", "answer.js", "manifest.json", "icon.png"];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)));   // 安裝時先存一份
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
+});
+
+self.addEventListener("activate", e => {
+  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("ytp-vocabuddy-") && k !== CACHE).map(k => caches.delete(k)))));
 });
 
 self.addEventListener("fetch", e => {
   e.respondWith(
-    caches.match(e.request).then(hit => hit || fetch(e.request)) // 先問快取，沒有才上網
+    caches.open(CACHE).then(c => c.match(e.request)).then(hit => hit || fetch(e.request))
   );
 });

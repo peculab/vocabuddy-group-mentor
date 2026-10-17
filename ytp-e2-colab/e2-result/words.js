@@ -1,17 +1,180 @@
-// words.js —— 單字包：全隊共編，進 Git（Lab 8 Sprint 4；PLAN 見 index.html 頂端註解）
+// 康軒 114 三上精選，非完整字表。課次來源：
+// https://www.junyiacademy.org/topics/k-j-114-vocab-b5-u1 （u1～u6）
 const WORDS = [
-  {en:"algorithm", zh:"演算法"},   {en:"recursion", zh:"遞迴"},
-  {en:"vocabulary", zh:"字彙"},    {en:"memorize", zh:"背誦"},
-  {en:"efficient", zh:"有效率的"}, {en:"persist", zh:"堅持；持續"},
-  {en:"retrieve", zh:"取回；檢索"},{en:"interval", zh:"間隔"},
-  // 動物主題單字包（Sprint 4 多人共編演練，分支 lab08/feature/words-animals）
-  {en:"elephant", zh:"大象"},       {en:"dolphin", zh:"海豚"},
-  {en:"eagle", zh:"老鷹"},          {en:"penguin", zh:"企鵝"},
-  {en:"giraffe", zh:"長頸鹿"},      {en:"squirrel", zh:"松鼠"},
-  {en:"octopus", zh:"章魚"},        {en:"kangaroo", zh:"袋鼠"},
-  {en:"butterfly", zh:"蝴蝶"},      {en:"crocodile", zh:"鱷魚"},
-  {en:"loop", zh:"??"},
-  {en:"variable", zh:"??"},
-  {en:"debug", zh:"??"}
+  {
+    "en": "subject",
+    "zh": "科目",
+    "unit": 1
+  },
+  {
+    "en": "type",
+    "zh": "類型",
+    "unit": 1
+  },
+  {
+    "en": "holiday",
+    "zh": "假日",
+    "unit": 1
+  },
+  {
+    "en": "Christmas Eve",
+    "zh": "耶誕夜",
+    "unit": 1
+  },
+  {
+    "en": "nobody",
+    "zh": "沒有人",
+    "unit": 1
+  },
+  {
+    "en": "king",
+    "zh": "國王",
+    "unit": 1
+  },
+  {
+    "en": "delivery",
+    "zh": "運送",
+    "unit": 2
+  },
+  {
+    "en": "choice",
+    "zh": "選擇（名詞）",
+    "unit": 2
+  },
+  {
+    "en": "driver",
+    "zh": "駕駛員",
+    "unit": 2
+  },
+  {
+    "en": "tip",
+    "zh": "小費",
+    "unit": 2
+  },
+  {
+    "en": "couch",
+    "zh": "長沙發",
+    "unit": 2
+  },
+  {
+    "en": "tap",
+    "zh": "輕拍",
+    "unit": 2
+  },
+  {
+    "en": "spider",
+    "zh": "蜘蛛",
+    "unit": 3
+  },
+  {
+    "en": "present",
+    "zh": "禮物",
+    "unit": 3
+  },
+  {
+    "en": "lovely",
+    "zh": "可愛的",
+    "unit": 3
+  },
+  {
+    "en": "expect",
+    "zh": "預期",
+    "unit": 3
+  },
+  {
+    "en": "opinion",
+    "zh": "意見",
+    "unit": 3
+  },
+  {
+    "en": "create",
+    "zh": "創造",
+    "unit": 4
+  },
+  {
+    "en": "explain",
+    "zh": "解釋",
+    "unit": 4
+  },
+  {
+    "en": "butterfly",
+    "zh": "蝴蝶",
+    "unit": 4
+  },
+  {
+    "en": "lie",
+    "zh": "說謊",
+    "unit": 4
+  },
+  {
+    "en": "farm",
+    "zh": "農場",
+    "unit": 4
+  },
+  {
+    "en": "lesson",
+    "zh": "課程",
+    "unit": 4
+  },
+  {
+    "en": "foreign",
+    "zh": "外國的",
+    "unit": 5
+  },
+  {
+    "en": "rise",
+    "zh": "上升",
+    "unit": 5
+  },
+  {
+    "en": "success",
+    "zh": "成功（名詞）",
+    "unit": 5
+  },
+  {
+    "en": "fail",
+    "zh": "失敗",
+    "unit": 5
+  },
+  {
+    "en": "deal with",
+    "zh": "處理",
+    "unit": 5
+  },
+  {
+    "en": "pot",
+    "zh": "鍋子",
+    "unit": 5
+  },
+  {
+    "en": "appear",
+    "zh": "出現",
+    "unit": 6
+  },
+  {
+    "en": "deal",
+    "zh": "交易",
+    "unit": 6
+  },
+  {
+    "en": "kilogram",
+    "zh": "公斤",
+    "unit": 6
+  },
+  {
+    "en": "paint",
+    "zh": "油漆（名詞）",
+    "unit": 6
+  },
+  {
+    "en": "total",
+    "zh": "總計的",
+    "unit": 6
+  },
+  {
+    "en": "sight",
+    "zh": "視力",
+    "unit": 6
+  }
 ];
-if (typeof module !== "undefined") module.exports = WORDS;
+if(typeof module !== 'undefined') module.exports=WORDS;
